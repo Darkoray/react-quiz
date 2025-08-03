@@ -1,5 +1,7 @@
 import { useEffect, useReducer } from 'react';
 
+import questionsData from '../questions.json';
+
 import Loader from './utilities/Loader';
 import Error from './utilities/Error';
 
@@ -14,7 +16,7 @@ import Question from './screen/Question';
 import NextButton from './screen/NextButton';
 import Timer from './screen/Timer';
 
-const SECS_PER_QUESTION = 30;
+const SECS_PER_QUESTION = 15;
 
 const initialState = {
   questions: [],
@@ -93,10 +95,11 @@ export default function App() {
   const maxPossiblePoints = questions.reduce((prev, cur) => prev + cur.points, 0);
 
   useEffect(() => {
-    fetch('/data/questions.json')
+    dispatch({ type: 'dataReceived', payload: questionsData.questions });
+    /*     fetch('./questions.json')
       .then(res => res.json())
       .then(data => dispatch({ type: 'dataReceived', payload: data.questions }))
-      .catch(() => dispatch({ type: 'dataFailed' }));
+      .catch(() => dispatch({ type: 'dataFailed' })); */
   }, []);
 
   return (
