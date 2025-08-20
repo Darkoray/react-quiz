@@ -49,7 +49,7 @@ These are smaller, reusable components for general use.
 
 ---
 
-## ![1754217032492](image/README/1754217032492.png)
+## ![screenshot](screenshot.png)
 
 ---
 
@@ -58,25 +58,29 @@ These are smaller, reusable components for general use.
 ```
 src/
 ├─ components/
-│   ├─ layouts/
-│   │   ├─ FinishedScreen.js
-│   │   ├─ Footer.js
-│   │   ├─ Header.js
-│   │   ├─ Main.js
-│   │   └─ StartScreen.js
-│   ├─ screen/
-│   │   ├─ NextButton.js
-│   │   ├─ Options.js
-│   │   ├─ Progress.js
-│   │   ├─ Question.js
-│   │   └─ Timer.js
-│   ├─ utilities/
-│   │   ├─ Error.js
-│   │   └─ Loader.js
-│   ├─ App.js
-│   └─ DateCounter.js
+│  ├─ contexts/
+│  │  └─ QuizContext.jsx
+│  ├─ layouts/
+│  │  ├─ FinishedScreen.jsx
+│  │  ├─ Footer.jsx
+│  │  ├─ Header.jsx
+│  │  ├─ Main.jsx
+│  │  └─ StartScreen.jsx
+│  ├─ screen/
+│  │  ├─ NextButton.jsx
+│  │  ├─ Options.jsx
+│  │  ├─ Progress.jsx
+│  │  ├─ Question.jsx
+│  │  └─ Timer.jsx
+│  ├─ utilities/
+│  │  ├─ Error.js
+│  │  └─ Loader.js
+│  ├─ App.jsx
+│  └─ DateCounter.js
 ├─ index.css
-└─ index.js
+├─ index.jsx
+└─ questions.json
+
 ```
 
 ---
